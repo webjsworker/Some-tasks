@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </hea<!-- d>
+
+<body>
+    text
+    <script>
+        console.log("start");
+        let strarr = [ "1 2 22 55 63", "2 5 0", "3 0 0", "99 99 99 999 99999 999 999 99", "0 0 0 0 0"]
+
+        let solution = function (strArr) {
+            let sum = 0;
+
+            for (let i = 0; i < strArr.length; i++) {
+                 console.log("lenght = " + strArr.length)
+                let str = strArr[i];
+                /* console.log("strArr[i] + " + strArr[i]) */
+                let arr = str.split(' ');
+                let number = arr.map(Number);
+
+                let min = Math.min.apply(null, number)
+                /* console.log('min' + " " + i + " " + min ) */
+                sum = sum + min;
+
+            }
+            console.log("sum = " + sum)
+            return sum
+            //your code here
+
+        };
+        solution(strarr);  
+    </script>
+</body>
+
+</html> -->
