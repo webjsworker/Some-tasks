@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Start
+    <script>
+        let param1 = "903";
+        let param2 = "100"
+
+        let solution = function (str1, str2) {
+            let sum = "";
+            if (str1.length > str2.length) {
+                let diff = str1.length - str2.length;
+                for (let i = 0; i < diff; i++) {
+                    str2 = "0" + str2;
+                }
+            } else {
+                let diff = str2.length - str1.length;
+                for (let i = 0; i < diff; i++) {
+                    str1 = "0" + str1;
+                }
+            }
+
+
+            let reg = 0
+            for (var i = str1.length - 1; i >= 0; i--) {
+
+                let result = Number(str1[i]) + Number(str2[i]) + reg
+
+                if (result >= 10) {
+                    reg = 1;
+                    result = String(result)
+                    result = result[1]
+                } else { reg = 0 }
+
+                console.log("result = " + result)
+                sum = String(result) + sum
+                console.log("reg = " + reg)
+
+            }
+
+            if (reg === 1) {
+
+
+                sum = "1" + sum;
+                reg = 0;
+            }
+
+            return sum
+        };
+
+        console.log("answer = " + solution(param1, param2))
+
+    </script>
+</body>
+
+</html>
+
+let solution = function (str, param) {
+    let first = Number(str);
+    let second = Number(param);
+    let sum = 0;
+    sum =String(first + second)  ;
+    
+     console.log(typeof(sum))
+    return sum
+};
