@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </hea<!-- d>
+
+<body>
+
+
+
+
+
+    <script>
+
+        // если все элемнты не соответсвуют отдаем ""
+
+
+          let param = [3, 4, 53, 5.123, "4", 1, -2, null, "2abc23", 7, 1, 2, 3, 4]
+        // "(341) 712-3200"
+        /*  let param = [0, 1, 53, 5.123, "4", 1, -2, null, "2abc23", 7, 1, 2, 3] */
+        /*  let param = [1, 1, 53, 5.123, "4", 1, -2, null, "2abc23", "4", "4", 2, 3,2,2,2,2,2,2,2,2,2, ] */
+        /*  let param = [3, 7, 53, 5.123, "4", 5, -2, null, "2abc23", "4", "4", 2, 3, 1,0 ] */
+        /* let param = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] */
+        /* let param = ["1"] */
+
+        let solution = function (tele) {
+            let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            let result = [];
+            let nothing = 0;
+            let answer = ""
+            console.log("tele =" + tele)
+            for (i = 0; i < tele.length; i++) {
+                switch (tele[i]) {
+                    case number[0]:
+                        result.push(tele[i])
+                        break;
+                    case number[1]:
+                        result.push(tele[i])
+                        break;
+                    case number[2]:
+                        result.push(tele[i])
+                        break;
+                    case number[3]:
+                        result.push(tele[i])
+                        break;
+                    case number[4]:
+                        result.push(tele[i])
+                        break;
+                    case number[5]:
+                        result.push(tele[i])
+                        break;
+                    case number[6]:
+                        result.push(tele[i])
+                        break;
+                    case number[7]:
+                        result.push(tele[i])
+                        break;
+                    case number[8]:
+                        result.push(tele[i])
+                        break;
+                    case number[9]:
+                        result.push(tele[i])
+                        break;
+                }
+
+            }
+            if (result.length < 1) {
+                nothing = 1;
+            }
+            console.log("result = " + result)
+            let x = number.length - result.length;
+            if (result.length < 10) {
+                for (i = 0; i < x; i++) {
+                    result.push(0)
+                }
+            }
+            let param1 = String(result[0]) + String(result[1]) + String(result[2]);
+            let param2 = String(result[3]) + String(result[4]) + String(result[5])
+            let param3 = String(result[6]) + String(result[7]) + String(result[8]) + String(result[9])
+            if (nothing === 0) {
+                answer = "(" + param1 + ") " + param2 + " - " + param3;
+            } else {
+                answer = "";
+            }
+            console.log(answer.length)
+            return answer
+        }
+
+        console.log(solution(param));
+
+
+
+    </script>
+</body>
+
+</html> -->
