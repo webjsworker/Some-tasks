@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Start
+    <script>
+
+        
+        /* let param = "1бун + 1коп + 2бун + 20коп + 1бун"; */
+        /*  let param = " 1коп +  20коп "; */
+        /* let param = " 1бун  + 99коп + 1коп "; */
+        let param = " 1бун  + 2бун ";
+
+
+       /* let param =   "5руб 35коп + 4руб 65коп" */   // => '10руб 0коп'  
+
+
+        let solution = function (pocketStr) {
+            
+            let sum = 0;
+            let answer = "";
+            let number = pocketStr.split(' + ');
+            let byn = 0;
+            console.log("number = " + number)
+            for (let i = 0; i < number.length; i++) {
+                let simbol1 = "бун";
+                let byn = number[i].replace(simbol1, "00")
+                number[i] = byn;
+            }
+            for (let i = 0; i < number.length; i++) {
+                let simbol1 = "коп";
+                let byn = number[i].replace(simbol1, "")
+                number[i] = byn;
+            }
+            for (let i = 0; i < number.length; i++) {
+                sum += Number(number[i]);
+                let stringSum = String(sum);
+                let copeiki = stringSum.substr(stringSum.length - 2, stringSum.length)
+                let rubli = stringSum.substr(0, stringSum.length - 2)
+                if (sum < 100) {
+                    rubli = "0";
+                }
+                answer = rubli + "бун" + " " + copeiki + "коп";
+
+            }
+            return answer
+        };
+
+        console.log(solution(param))
+
+
+
+    </script>
+
+
+    /* var el = number[1]
+    var numEl = parseInt(el.match(/\d+/))
+    console.log(numEl)
+    */
+    /* ,
+    letters = str.replace(/[^a-z]/gi, ""); */
+
+
+    /* var orig = ' foo ';
+    console.log(orig.trim()); // 'foo' */
+
+
+
+
+
+
+    for (i = 0; i < number.length; i++) { let simbol1="бун" ; let byn=number[i].replace(simbol1, " бун" ) number[i]=byn;
+        } for (i=0; i < number.length; i++) { let simbol2="коп" ; let cop=number[i].replace(simbol2, " коп" )
+        number[i]=cop; } /* console.log(number) */ let x=[]; for (i=0; i < number.length; i++) { let
+        element=number[i].split(' ');
+                /* console.log("element = " + element) */
+                let pro = element.map(String);
+                /* x.push(element)  */
+
+                console.log("pro = " + pro);
+            }
+
+
+
+
+
+
+
+</body>
+
+</html>
