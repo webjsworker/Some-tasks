@@ -13,18 +13,40 @@
     <script>
         /* let param = "1бун + 1коп + 2бун + 20коп + 1бун"; */
        /*  let param = " 1коп +  20коп "; */
-        let param = " 1000000000000000бун  + 20бун + 0коп + 20коп";
+       /*  let param = " 1бун  + 99коп "; */
+        /* let param = " 1бун  + 2бун "; */
+        /* let param =   "5бун 35коп + 4бун 65коп" */
+        let param =   "50бун 35коп + 4бун 00коп"
+
 
 
 
         let solution = function (pocketStr) {
             let sum = 0;
             let answer = "";
-            let number = pocketStr.split(' + ');
+            let num = pocketStr.split(' + ');
+           /*  console.log("num = " + num)
+            console.log(typeof(num)) */
             /* let arr = pocketStr.split(' + ');
             let number = arr.map(String); */
             let byn = 0;
-
+           let mass =  num.join(' ')
+           let number  = mass.split(' ')
+       /* console.log("mass = " + mass)  
+       console.log(typeof(mass)) */
+       console.log("number = " + number) 
+       console.log(typeof(number))
+       
+       
+       /* for(let i = 0; i < number.length; i++){
+       let x = number[i].split(" ")
+      let v = []
+      v.push(x);
+      console.log("v = " + v)
+       
+       }  */
+        
+      
             for (let i = 0; i < number.length; i++) {
                 let simbol1 = "бун";
                 let byn = number[i].replace(simbol1, "00")
@@ -36,6 +58,8 @@
                 number[i] = byn;
             }
 
+ 
+
             for (let i = 0; i < number.length; i++) {
                 sum += Number(number[i]);
                 let stringSum = String(sum);
@@ -45,11 +69,25 @@
                 if(sum < 100) {
                     rubli = "0";
                 }
+                               
+               /*  if (copeiki === "00" &&  rubli !== "0") {
+                    
+                    answer = rubli + "бун" ;
+                }
+                if (rubli === "0" &&  copeiki !== "00" ) {
+                   
+                    answer = copeiki + "коп";
+                }
 
-                answer = rubli + "бун" + " " + copeiki + "коп";
+                if (rubli !== "0" &&  copeiki !== "00" ) {
+                    
+                   answer = rubli + "бун" + " " + copeiki + "коп"; 
+                }
+ */
+                answer = rubli + "бун" + " " + copeiki + "коп"; 
                 
             }
-            console.log(answer.length)
+            console.log("answer length = " + answer.length)
 
             return answer
         };

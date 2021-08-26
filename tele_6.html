@@ -22,14 +22,15 @@
         /*  let param = "1,2,3,4" */
         // "(341) 712-3200"
         /*  let param = [0, 1, 53, 5.123, "4", 1, -2, null, "2abc23", 7, 1, 2, 3] */
-        /*  let param = [1, 1, 53, 5.123, "4", 1, -2, null, "2abc23", "4", "4", 2, 3,2,2,2,2,2,2,2,2,2, 2,2,2,2,2 ] */
-         let param = [3, 7, 53, 5.123, "4", 5, -2, null, "2abc23", "4", "4", 2, 3, 1,0 ]
-        /* let param = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] */
-        /* let param = ["1"] */
+         /* let param = [1, 1, 53, 5.123, "4", 1, -2, null, "2abc23", "4", "4", 2, 3,2,2,2,2,2,2,2,2,2, 2,2,2,2,2 ] */
+        /*  let param = [3, 7, 53, 5.123, "4", 5, -2, null, "2abc23", "4", "4", 2, 3, 1,0 ] */
+        /* let param = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1,2,3,4,5] */
+        let param = ["1"]
 
-        let solution = function (tele) {
-            console.log(tele)
-            let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let solution = function () {
+            return function(tele) {
+                console.log(tele)
+                let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             let result = [];
             let nothing = 0;
             let answer = ""
@@ -87,12 +88,13 @@
                 answer = "";
             }
 
-          
+             
 
-            return answer
+            return  answer 
+            }
         }
 
-        console.log(solution(param));
+        console.log(solution()(param));
 
 
 
@@ -101,6 +103,11 @@
 С массивом 
 answer = "+(" + param1 + ") " + param2 + " - " + param3;
 answer = "(" + param1 + ")  " + param2 + "  -  " + param3;
+С вложенной функцией и массивом 
+answer = "(" + param1 + ") " + param2 + " - " + param3;
+Вложенная функция без массива  
+answer = "(" + param1 + ") " + param2 + " - " + param3;
+answer = " (" + param1 + ") " + param2 + " - " + param3;
 </body>
 
 </html> -->

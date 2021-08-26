@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </hea<!-- d>
+
+<body>
+
+
+
+
+
+    <script>
+
+        // если все элемнты не соответсвуют отдаем ""
+
+
+        /*  let param = [0, 3, 4, 53, 5.123, "4", 1, -2, null, "2abc23", 7, 1, 2, 3, 4] */
+        /*  let param = "1,2,3,4" */
+        // "(341) 712-3200"
+        /*  let param = [0, 1, 53, 5.123, "4", 1, -2, null, "2abc23", 7, 1, 2, 3] */
+       /*  let param = [1, 1, 53, 5.123, "4", 1, -2, null, "2abc23", "4", "4", 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] */
+        /*  let param = [3, 7, 53, 5.123, "4", 5, -2, null, "2abc23", "4", "4", 2, 3, 1,0 ] */
+        /* let param = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] */
+        /* let param = ["1"] */
+        let param = [0,0]
+
+        let solution = function (param) {
+
+            let a = param.filter(el => typeof el == "number" && ("" + el).match("^[0-9]$"));
+            b = [...a, ...(new Array(9).fill(0))].join("");
+            var code = b.substring(0, 3);
+            var num1 = b.substring(3, 6);
+            var num2 = b.substring(6, 10);
+            var tel = `(${code}) ${num1} - ${num2}`;
+            
+            return tel
+        }
+
+
+
+        console.log(solution(param));
+
+
+
+    </script>
+</body>
+
+</html> -->

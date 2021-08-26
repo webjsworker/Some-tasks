@@ -28,53 +28,34 @@
                     str1 = "0" + str1;
                 }
             }
-
-            console.log(str1 + " + " + str2)
             let reg = 0
             for (var i = str1.length - 1; i >= 0; i--) {
-
                 let result = Number(str1[i]) + Number(str2[i]) + reg
-
                 if (result >= 10) {
                     reg = 1;
                     result = String(result)
                     result = result[1]
                 } else { reg = 0 }
-
-                console.log("result = " + result)
                 sum = String(result) + sum
-                console.log("reg = " + reg)
-
             }
-
             if (reg === 1) {
                 sum = "1" + sum;
                 reg = 0;
             }
-            /* if (sum.length < 10) {
-                console.log("zero")
-                let addzero = 10 - sum.length
-                for (var i = 1; i <= addzero; i++) {
-                    sum = "0" + sum;
+            for (i = 0; i < sum.length; i++) {
+                if (sum[0] === "0") {
+                    let str = sum.split('')
+
+                    str.splice(0, 1)
+                    str = str.join('')
+                    sum = str;
                 }
-            } */
+            }
 
-            console.log("answer length = " + sum.length)
-for (i = 0 ; i< sum.length; i++){
-
-
-    if (sum[0] === "0" ) {
-        let str = sum.split('')
-
-str.splice(0, 1)
-str = str.join('')
-     console.log("sum = " + str)
-      sum = str; 
-    }
-}
-          
             return sum
         };
+
+
 
         console.log("answer = " + solution(param1, param2))
         /* console.log("param1 length = " + param1.length)
